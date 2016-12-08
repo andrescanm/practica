@@ -66,6 +66,9 @@ public class JInternalFramePredios extends javax.swing.JInternalFrame {
         txtBuscar = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+
         jPanelCampos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Administración de predios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 2, 12))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -174,27 +177,22 @@ public class JInternalFramePredios extends javax.swing.JInternalFrame {
         txtNumUnidadesNoHabitacionales1.setMinimumSize(new java.awt.Dimension(145, 25));
         txtNumUnidadesNoHabitacionales1.setPreferredSize(new java.awt.Dimension(145, 25));
 
-        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/images/1479613618_plus.png"))); // NOI18N
         btnNuevo.setText("Nuevo");
         btnNuevo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnNuevo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/images/1479615408_save.png"))); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/images/1479612648_cog.png"))); // NOI18N
         btnEditar.setText("Editar");
         btnEditar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnEditar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/images/1479614741_trash.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnEliminar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        btnEliminar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/images/1479612492_cross.png"))); // NOI18N
         btnEliminar1.setText("Cancelar");
         btnEliminar1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnEliminar1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -390,7 +388,6 @@ public class JInternalFramePredios extends javax.swing.JInternalFrame {
         txtBuscar.setMinimumSize(new java.awt.Dimension(145, 25));
         txtBuscar.setPreferredSize(new java.awt.Dimension(145, 25));
 
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/images/1479612512_search.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);

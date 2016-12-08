@@ -59,6 +59,9 @@ public class JInternalFrameUsuarios extends javax.swing.JInternalFrame {
         txtBuscar = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+
         jPanelCampos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Administración de usuarios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 2, 12))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N

@@ -11,6 +11,7 @@ import optimizador.optimizadordirecciones.Vista.JInternalFrameUsuarios;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import optimizador.optimizadordirecciones.Vista.JInternalFramePredios;
 
 /**
  *
@@ -19,14 +20,17 @@ import javax.swing.JOptionPane;
 public class ControladorUsuario implements ActionListener{
     JFramePrincipal vistaPrincipal = new JFramePrincipal();
     JInternalFrameUsuarios vistaUsuario = new JInternalFrameUsuarios();
+    JInternalFramePredios vistaPredios = new JInternalFramePredios();
     UsuarioDAO modeloUsuario = new UsuarioDAO();
 
-    public ControladorUsuario(JFramePrincipal vistaPrincipal, JInternalFrameUsuarios vistaUsuario, UsuarioDAO modeloUsuario) {
+    public ControladorUsuario(JFramePrincipal vistaPrincipal, JInternalFrameUsuarios vistaUsuario, JInternalFramePredios vistaPredios, UsuarioDAO modeloUsuario) {
         this.vistaPrincipal = vistaPrincipal;
         this.vistaPrincipal.setVisible(true);
         this.vistaUsuario = vistaUsuario;
         this.modeloUsuario = modeloUsuario;
+        this.vistaPredios = vistaPredios;
         this.vistaPrincipal.menuItemUsuarios.addActionListener(this);
+        this.vistaPrincipal.menuItemPredios.addActionListener(this);
         this.vistaUsuario.btnNuevo.addActionListener(this);
         this.vistaUsuario.btnGuardar.addActionListener(this);
         this.vistaUsuario.btnEditar.addActionListener(this);
@@ -76,6 +80,7 @@ public class ControladorUsuario implements ActionListener{
         vistaUsuario.txtArea.setEditable(true);
         vistaUsuario.txtUsername.setEditable(true);
         vistaUsuario.cboxSeleccionarTipo.setSelectedIndex(0);
+        vistaUsuario.cboxSeleccionarTipo.setEnabled(true);
         vistaUsuario.pwdIngresarPassword.setEditable(true);
         vistaUsuario.pwdIngresarPassword1.setEditable(true);
         vistaUsuario.btnGuardar.setEnabled(true);
@@ -126,5 +131,10 @@ public class ControladorUsuario implements ActionListener{
             vistaUsuario.btnEliminar.setEnabled(false);
             vistaUsuario.btnNuevo.setEnabled(false);
         }
+        
+        
+        if(e.getSource() == vistaPrincipal.menuItemPredios)
+        vistaPrincipal.jDesktopPane1.add(vistaPredios);
+            vistaPredios.setVisible(true);        
     }    
 }

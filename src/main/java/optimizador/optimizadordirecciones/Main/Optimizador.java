@@ -7,7 +7,6 @@ package optimizador.optimizadordirecciones.Main;
 import optimizador.optimizadordirecciones.Modelo.*;
 import optimizador.optimizadordirecciones.Vista.*;
 import optimizador.optimizadordirecciones.Controlador.*;
-import optimizador.optimizadordirecciones.Vista.JFramePrincipal;
 /**
  *
  * 
@@ -17,7 +16,8 @@ public class Optimizador {
     public static void main(String[] args){
         JFramePrincipal vistaPrincipal = new JFramePrincipal();
         JInternalFrameUsuarios vistaUsuarios = new JInternalFrameUsuarios();
+        JInternalFramePredios vistaPredios = new JInternalFramePredios();
         UsuarioDAO modeloUsuario = new UsuarioDAO();
-        ControladorUsuario controladorUsuarios = new ControladorUsuario(vistaPrincipal, vistaUsuarios, modeloUsuario);
+        ControladorUsuario controladorUsuarios = new ControladorUsuario(vistaPrincipal, vistaUsuarios, vistaPredios, modeloUsuario);
     }
 }
